@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SearchFragment">
+
+    <TextView
+        android:id="@+id/SearchTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textSize="26dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="64dp"
+        android:textStyle="bold"/>
+
+    <SearchView
+        android:id="@+id/SearchSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SearchTextView"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:iconifiedByDefault="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/RecommendTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recommended builds"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/SearchSearchView"
+        android:textAlignment="center"
+        />
+
+
+
+</RelativeLayout>

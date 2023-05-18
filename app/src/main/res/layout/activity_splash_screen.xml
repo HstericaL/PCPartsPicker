@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iconLogo"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/Title"
+        android:layout_centerInParent="true"
+        android:src="@drawable/screwdriver_svgrepo_com" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="PC Part Picker"
+        android:textColor="?attr/colorOnPrimary"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="your #1 pc parts picker"
+        android:textSize="16dp"
+        android:layout_below="@+id/Title"
+        android:layout_alignLeft="@+id/Title"
+        android:textColor="?attr/colorOnPrimary"/>
+
+</RelativeLayout>
