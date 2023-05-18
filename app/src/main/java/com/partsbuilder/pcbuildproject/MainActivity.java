@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FloatingActionButton fab = findViewById(R.id.fab);
+
         // Navigation menu
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -49,12 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+                        fab.setVisibility(View.VISIBLE);
                         return true;
                     case R.id.search:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, searchFragment).commit();
+                        fab.setVisibility(View.VISIBLE);
                         return true;
                     case R.id.builds:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, buildsFragment).commit();
+                        fab.setVisibility(View.VISIBLE);
                         return true;
                 }
 
@@ -63,11 +68,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // FAB to create new build - go to CreateBuildFragment
-        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, createBuildFragment).commit();
+
+                fab.setVisibility(View.INVISIBLE);
+
             }
         });
     }
