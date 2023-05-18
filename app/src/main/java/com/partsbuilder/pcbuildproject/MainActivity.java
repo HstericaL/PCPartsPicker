@@ -18,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 import com.partsbuilder.pcbuildproject.fragments.BuildsFragment;
+import com.partsbuilder.pcbuildproject.fragments.CreateBuildFragment;
 import com.partsbuilder.pcbuildproject.fragments.HomeFragment;
 import com.partsbuilder.pcbuildproject.fragments.SearchFragment;
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment homeFragment = new HomeFragment();
     SearchFragment searchFragment = new SearchFragment();
     BuildsFragment buildsFragment = new BuildsFragment();
+
+    CreateBuildFragment createBuildFragment = new CreateBuildFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +62,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // fab icon here
+        // FAB to create new build - go to CreateBuildFragment
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Create a new build",Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, createBuildFragment).commit();
             }
         });
     }

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CreateBuildFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- Create Build Fragment Text View -->
+    <TextView
+        android:id="@+id/CreateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Build"
+        android:textSize="26dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="64dp"
+        android:textStyle="bold"/>
+
+    <!-- Build name -->
+    <TextView
+        android:id="@+id/buildNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Build name"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/CreateTextView"/>
+
+    <!-- Build name Edit Text -->
+    <EditText
+        android:id="@+id/buildNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/buildNameTextView"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:iconifiedByDefault="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="#EFEFEF"
+        android:singleLine="true"
+        android:hint="Enter build name"
+        android:paddingLeft="12dp"/>
+
+    <!-- Processor Text View-->
+    <TextView
+        android:id="@+id/processorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Processor"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/buildNameEditText"/>
+
+    <!-- Processor Text Input View -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/processorTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/processorTextView">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="AMD Ryzen 3 3100"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Motherboard Text View-->
+    <TextView
+        android:id="@+id/motherboardTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motherboard"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/processorTextInputLayout"/>
+
+    <!-- Motherboard Text Input View -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/motherboardTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/motherboardTextView">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="MSI B450M Mortar Max"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Cooler Text View-->
+    <TextView
+        android:id="@+id/cpucoolerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CPU Cooler"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/motherboardTextInputLayout"/>
+
+    <!-- Motherboard Text Input View -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cpucoolerTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/cpucoolerTextView">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="AMD Stock Wraith"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Graphics Card Text View-->
+    <TextView
+        android:id="@+id/graphicsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Graphics Card"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/cpucoolerTextInputLayout"/>
+
+    <!-- Graphics Card Text Input View -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/graphicsTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/graphicsTextView">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PALIT NVIDIA GTX 1060 6GB"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Case Text View-->
+    <TextView
+        android:id="@+id/caseTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Case"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/graphicsTextInputLayout"/>
+
+    <!-- Case Text Input View -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/caseTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/caseTextView">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="RAKK Haliya M-ATX"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- RAM Text View-->
+    <TextView
+        android:id="@+id/ramTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RAM"
+        android:textSize="20dp"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_below="@id/caseTextInputLayout"/>
+
+    <!-- RAM Text Input View -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ramTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/ramTextView">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="HYPERX Fury 16GB 3200Mhz DDR4"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- PSU Text View-->
+        <TextView
+            android:id="@+id/psuTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Powersupply"
+            android:textSize="20dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:paddingHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:layout_below="@id/ramTextInputLayout"/>
+
+        <!-- PSU Text Input View -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/psuTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/psuTextView">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CORSAIR VS650w"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Should place the total below -->
+        <!-- Here! -->
+
+        <!-- Button for accepting build -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="CREATE BUILD"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_below="@+id/psuTextInputLayout"/>
+
+
+    </RelativeLayout>
+</ScrollView>

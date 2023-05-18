@@ -19,8 +19,9 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        CardView cardView1 = view.findViewById(R.id.Card1);
+        // inflater for layout
+        View homeView = inflater.inflate(R.layout.fragment_home, container, false);
+        CardView cardView1 = homeView.findViewById(R.id.Card1);
 
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +31,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        return view;
+        return homeView;
     }
 }

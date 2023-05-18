@@ -29,7 +29,7 @@
             android:textSize="20dp"
             android:textColor="?attr/colorOnPrimary"
             android:paddingHorizontal="32dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:textStyle="bold"
             android:layout_below="@id/HomeTextView"/>
 
@@ -39,7 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_below="@+id/recommend1TextView">
+            android:layout_below="@+id/recommend1TextView"
+            android:layout_marginTop="12dp">
 
             <LinearLayout
                 android:id="@+id/shapeLayout"
@@ -80,7 +81,8 @@
                             android:layout_height="wrap_content"
                             android:text="Kisig"
                             android:textSize="20dp"
-                            android:textStyle="bold">
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
                         </TextView>
 
                         <!-- Item Description -->
@@ -125,7 +127,8 @@
                             android:layout_height="wrap_content"
                             android:text="Clickbait"
                             android:textSize="20dp"
-                            android:textStyle="bold">
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
                         </TextView>
 
                         <!-- Item Description -->
@@ -170,7 +173,8 @@
                             android:layout_height="wrap_content"
                             android:text="Sentinel"
                             android:textSize="20dp"
-                            android:textStyle="bold">
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
                         </TextView>
 
                         <!-- Item Description -->
