@@ -21,8 +21,9 @@
             android:layout_marginTop="64dp"
             android:textStyle="bold"/>
 
+        <!-- Text View for Gamers -->
         <TextView
-            android:id="@+id/recommend1TextView"
+            android:id="@+id/gamerTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Builds for Gamers"
@@ -33,13 +34,13 @@
             android:textStyle="bold"
             android:layout_below="@id/HomeTextView"/>
 
-        <!-- Parent Horizontal View -->
+        <!-- Gamer Parent Horizontal View -->
         <HorizontalScrollView
-            android:id="@+id/horizontalScrollView1"
+            android:id="@+id/gamerScrollView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_below="@+id/recommend1TextView"
+            android:layout_below="@+id/gamerTextView"
             android:layout_marginTop="12dp">
 
             <LinearLayout
@@ -51,7 +52,7 @@
                 <!-- Add the button here -->
                 <!-- Item 1 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/Card1"
+                    android:id="@+id/gamecard1"
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
@@ -72,14 +73,14 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/screwdriver_svgrepo_com">
+                            android:src="@drawable/placeholder">
                         </ImageView>
 
                         <!-- Item Name -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kisig"
+                            android:text="Gamer 1"
                             android:textSize="20dp"
                             android:textStyle="bold"
                             android:textColor="?attr/colorOnPrimary">
@@ -97,7 +98,7 @@
 
                 <!-- Item 2 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/Card2"
+                    android:id="@+id/gamecard2"
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
@@ -118,14 +119,14 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/screwdriver_svgrepo_com">
+                            android:src="@drawable/placeholder">
                         </ImageView>
 
                         <!-- Item Name -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Clickbait"
+                            android:text="Gamer 2"
                             android:textSize="20dp"
                             android:textStyle="bold"
                             android:textColor="?attr/colorOnPrimary">
@@ -143,7 +144,7 @@
 
                 <!-- Item 3 -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/Card3"
+                    android:id="@+id/gamecard3"
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
@@ -164,14 +165,14 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/screwdriver_svgrepo_com">
+                            android:src="@drawable/placeholder">
                         </ImageView>
 
                         <!-- Item Name -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sentinel"
+                            android:text="Gamer 3"
                             android:textSize="20dp"
                             android:textStyle="bold"
                             android:textColor="?attr/colorOnPrimary">
@@ -190,41 +191,345 @@
             </LinearLayout>
         </HorizontalScrollView>
 
+        <!-- Text View for Architects -->
         <TextView
-            android:id="@+id/recommend2TextView"
+            android:id="@+id/architectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Builds for Architects"
             android:textSize="20dp"
             android:textColor="?attr/colorOnPrimary"
             android:paddingHorizontal="32dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="12dp"
             android:textStyle="bold"
-            android:layout_below="@id/recommend1TextView"/>
+            android:layout_below="@id/gamerScrollView"/>
 
+        <!-- Architect Parent Horizontal View -->
+        <HorizontalScrollView
+            android:id="@+id/architectScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/architectTextView"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:id="@+id/architectLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Add the button here -->
+                <!-- Item 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/architectcard1"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardElevation="0dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Item Image -->
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/placeholder">
+                        </ImageView>
+
+                        <!-- Item Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Architect 1"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
+                        </TextView>
+
+                        <!-- Item Description -->
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:textSize="12dp"
+                            android:text="AMD Ryzen 3 3100, NVIDIA GTX 1060 6GB , 16GB DDR4 3200Mhz RAM">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/architectcard2"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardElevation="0dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Item Image -->
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/placeholder">
+                        </ImageView>
+
+                        <!-- Item Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Architect 2"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
+                        </TextView>
+
+                        <!-- Item Description -->
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:textSize="12dp"
+                            android:text="INTEL Core i7-8700k, NVIDIA RTX 2060, 8GB DDR4 2133Mhz Ram">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/architectcard3"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardElevation="0dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Item Image -->
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/placeholder">
+                        </ImageView>
+
+                        <!-- Item Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Architect 3"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
+                        </TextView>
+
+                        <!-- Item Description -->
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:textSize="12dp"
+                            android:text="INTEL Core i7-8700k, NVIDIA RTX 2060, 8GB DDR4 2133Mhz Ram">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Text View for Video Editors -->
         <TextView
-            android:id="@+id/recommend3TextView"
+            android:id="@+id/editorTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Builds for Content Creators"
+            android:text="Builds for Video Editors"
             android:textSize="20dp"
             android:textColor="?attr/colorOnPrimary"
             android:paddingHorizontal="32dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="12dp"
             android:textStyle="bold"
-            android:layout_below="@id/recommend2TextView"/>
+            android:layout_below="@id/architectScrollView"/>
 
-        <TextView
-            android:id="@+id/recommend4TextView"
-            android:layout_width="match_parent"
+        <!-- Architect Parent Horizontal View -->
+        <HorizontalScrollView
+            android:id="@+id/editorScrollView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Builds for Businesses"
-            android:textSize="20dp"
-            android:textColor="?attr/colorOnPrimary"
-            android:paddingHorizontal="32dp"
-            android:layout_marginTop="220dp"
-            android:layout_marginBottom="128dp"
-            android:textStyle="bold"
-            android:layout_below="@id/recommend3TextView"/>
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/editorTextView"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:id="@+id/editorLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Add the button here -->
+                <!-- Item 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/editorcard1"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardElevation="0dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Item Image -->
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/placeholder">
+                        </ImageView>
+
+                        <!-- Item Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Video Editor 1"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
+                        </TextView>
+
+                        <!-- Item Description -->
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:textSize="12dp"
+                            android:text="AMD Ryzen 3 3100, NVIDIA GTX 1060 6GB , 16GB DDR4 3200Mhz RAM">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/editorcard2"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardElevation="0dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Item Image -->
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/placeholder">
+                        </ImageView>
+
+                        <!-- Item Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Video Editor 2"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
+                        </TextView>
+
+                        <!-- Item Description -->
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:textSize="12dp"
+                            android:text="INTEL Core i7-8700k, NVIDIA RTX 2060, 8GB DDR4 2133Mhz Ram">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/editorcard3"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardElevation="0dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Item Image -->
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/placeholder">
+                        </ImageView>
+
+                        <!-- Item Name -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Video Editor 3"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorOnPrimary">
+                        </TextView>
+
+                        <!-- Item Description -->
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:textSize="12dp"
+                            android:text="INTEL Core i7-8700k, NVIDIA RTX 2060, 8GB DDR4 2133Mhz Ram">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
     </RelativeLayout>
 </ScrollView>

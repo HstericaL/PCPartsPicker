@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.partsbuilder.pcbuildproject.R;
 
 /**
@@ -61,6 +64,20 @@ public class CreateBuildFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_build, container, false);
+        View createView = inflater.inflate(R.layout.fragment_create_build, container, false);
+
+        // initialize button
+        Button createButton = (Button) createView.findViewById(R.id.createBuildButton);
+        // on-click of button
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Created new build: database not found",Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        return createView;
     }
+
 }

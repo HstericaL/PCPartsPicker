@@ -38,7 +38,7 @@
     <EditText
         android:id="@+id/buildNameEditText"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_below="@+id/buildNameTextView"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="16dp"
@@ -75,9 +75,9 @@
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="AMD Ryzen 3 3100"/>
+            android:hint="Search processor"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Motherboard Text View-->
@@ -106,9 +106,9 @@
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MSI B450M Mortar Max"/>
+            android:hint="Search motherboard"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Cooler Text View-->
@@ -137,9 +137,9 @@
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="AMD Stock Wraith"/>
+            android:hint="Search CPU cooler"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Graphics Card Text View-->
@@ -168,9 +168,9 @@
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="PALIT NVIDIA GTX 1060 6GB"/>
+            android:hint="Search graphics card"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Case Text View-->
@@ -199,9 +199,9 @@
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RAKK Haliya M-ATX"/>
+            android:hint="Search case"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- RAM Text View-->
@@ -230,9 +230,9 @@
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="HYPERX Fury 16GB 3200Mhz DDR4"/>
+            android:hint="Search RAM"/>
     </com.google.android.material.textfield.TextInputLayout>
 
         <!-- PSU Text View-->
@@ -261,9 +261,9 @@
 
             <AutoCompleteTextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="CORSAIR VS650w"/>
+                android:hint="Search powersupply"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Should place the total below -->
@@ -271,6 +271,7 @@
 
         <!-- Button for accepting build -->
         <Button
+            android:id="@+id/createBuildButton"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:text="CREATE BUILD"
