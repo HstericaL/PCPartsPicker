@@ -1,19 +1,17 @@
 package com.partsbuilder.pcbuildproject.fragments;
 
+import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.partsbuilder.pcbuildproject.DBHelper;
 import com.partsbuilder.pcbuildproject.R;
 
@@ -276,11 +274,11 @@ public class CreateBuildFragment extends Fragment {
         List<String> processorList = new ArrayList<>();
         if (processorCursor != null && processorCursor.moveToFirst()) {
             do {
-                String processorBrand = processorCursor.getString(processorCursor.getColumnIndex("processor_brand"));
-                String processorModel = processorCursor.getString(processorCursor.getColumnIndex("processor_model"));
-                String processorCoresThreads = processorCursor.getString(processorCursor.getColumnIndex("cores_threads"));
-                String processorPrice = processorCursor.getString(processorCursor.getColumnIndex("msrp_php"));
-                String part = processorBrand + " " + processorModel +" "+ processorCoresThreads + " ₱" + processorPrice;
+                @SuppressLint("Range")String processorBrand = processorCursor.getString(processorCursor.getColumnIndex("processor_brand"));
+                @SuppressLint("Range")String processorModel = processorCursor.getString(processorCursor.getColumnIndex("processor_model"));
+                @SuppressLint("Range")String processorCoresThreads = processorCursor.getString(processorCursor.getColumnIndex("cores_threads"));
+                @SuppressLint("Range")String processorPrice = processorCursor.getString(processorCursor.getColumnIndex("msrp_php"));
+                @SuppressLint("Range")String part = processorBrand + " " + processorModel +" "+ processorCoresThreads + " ₱" + processorPrice;
                 processorList.add(part);
             } while (processorCursor.moveToNext());
             processorCursor.close();
@@ -291,10 +289,10 @@ public class CreateBuildFragment extends Fragment {
         List<String> motherboardList = new ArrayList<>();
         if (motherboardCursor != null && motherboardCursor.moveToFirst()) {
             do {
-                String motherboardBrand = motherboardCursor.getString(motherboardCursor.getColumnIndex("motherboard_brand"));
-                String motherboardModel = motherboardCursor.getString(motherboardCursor.getColumnIndex("motherboard_model"));
-                String motherboardPrice = motherboardCursor.getString(motherboardCursor.getColumnIndex("price"));
-                String part = motherboardBrand + " " + motherboardModel + " ₱" + motherboardPrice;
+                @SuppressLint("Range")String motherboardBrand = motherboardCursor.getString(motherboardCursor.getColumnIndex("motherboard_brand"));
+                @SuppressLint("Range")String motherboardModel = motherboardCursor.getString(motherboardCursor.getColumnIndex("motherboard_model"));
+                @SuppressLint("Range")String motherboardPrice = motherboardCursor.getString(motherboardCursor.getColumnIndex("price"));
+                @SuppressLint("Range")String part = motherboardBrand + " " + motherboardModel + " ₱" + motherboardPrice;
                 motherboardList.add(part);
             } while (motherboardCursor.moveToNext());
             motherboardCursor.close();
@@ -305,9 +303,9 @@ public class CreateBuildFragment extends Fragment {
         List<String> coolerList = new ArrayList<>();
         if (coolerCursor != null && coolerCursor.moveToFirst()) {
             do {
-                String coolerModel = coolerCursor.getString(coolerCursor.getColumnIndex("model"));
-                String coolerPrice = coolerCursor.getString(coolerCursor.getColumnIndex("price"));
-                String part = coolerModel + " ₱" + coolerPrice;
+                @SuppressLint("Range")String coolerModel = coolerCursor.getString(coolerCursor.getColumnIndex("model"));
+                @SuppressLint("Range")String coolerPrice = coolerCursor.getString(coolerCursor.getColumnIndex("price"));
+                @SuppressLint("Range")String part = coolerModel + " ₱" + coolerPrice;
                 coolerList.add(part);
             } while (coolerCursor.moveToNext());
             coolerCursor.close();
@@ -318,10 +316,10 @@ public class CreateBuildFragment extends Fragment {
         List<String> gpuList = new ArrayList<>();
         if (gpuCursor != null && gpuCursor.moveToFirst()) {
             do {
-                String gpuBrand = gpuCursor.getString(gpuCursor.getColumnIndex("brand"));
-                String gpuModel = gpuCursor.getString(gpuCursor.getColumnIndex("model"));
-                String gpuPrice = gpuCursor.getString(gpuCursor.getColumnIndex("price"));
-                String part = gpuBrand + " " + gpuModel + " ₱" + gpuPrice;
+                @SuppressLint("Range")String gpuBrand = gpuCursor.getString(gpuCursor.getColumnIndex("brand"));
+                @SuppressLint("Range")String gpuModel = gpuCursor.getString(gpuCursor.getColumnIndex("model"));
+                @SuppressLint("Range")String gpuPrice = gpuCursor.getString(gpuCursor.getColumnIndex("price"));
+                @SuppressLint("Range")String part = gpuBrand + " " + gpuModel + " ₱" + gpuPrice;
                 gpuList.add(part);
             } while (gpuCursor.moveToNext());
             gpuCursor.close();
@@ -332,10 +330,10 @@ public class CreateBuildFragment extends Fragment {
         List<String> caseList = new ArrayList<>();
         if (caseCursor != null && caseCursor.moveToFirst()) {
             do {
-                String caseBrand = caseCursor.getString(caseCursor.getColumnIndex("brand"));
-                String caseModel = caseCursor.getString(caseCursor.getColumnIndex("model"));
-                String casePrice = caseCursor.getString(caseCursor.getColumnIndex("price"));
-                String part = caseBrand + " " + caseModel + " ₱" + casePrice;
+                @SuppressLint("Range")String caseBrand = caseCursor.getString(caseCursor.getColumnIndex("brand"));
+                @SuppressLint("Range")String caseModel = caseCursor.getString(caseCursor.getColumnIndex("model"));
+                @SuppressLint("Range")String casePrice = caseCursor.getString(caseCursor.getColumnIndex("price"));
+                @SuppressLint("Range")String part = caseBrand + " " + caseModel + " ₱" + casePrice;
                 caseList.add(part);
             } while (caseCursor.moveToNext());
             caseCursor.close();
@@ -346,13 +344,13 @@ public class CreateBuildFragment extends Fragment {
         List<String> ramList = new ArrayList<>();
         if (ramCursor != null && ramCursor.moveToFirst()) {
             do {
-                String ramBrand = ramCursor.getString(ramCursor.getColumnIndex("brand"));
-                String ramModel = ramCursor.getString(ramCursor.getColumnIndex("model"));
-                String ramCapacity = ramCursor.getString(ramCursor.getColumnIndex("capacity"));
-                String ramSpeed = ramCursor.getString(ramCursor.getColumnIndex("speed"));
-                String ramType = ramCursor.getString(ramCursor.getColumnIndex("type"));
-                String ramPrice = ramCursor.getString(ramCursor.getColumnIndex("price"));
-                String part = ramBrand + " " + ramModel + " " + ramCapacity + " " + ramSpeed + " " + ramType + " ₱" + ramPrice;
+                @SuppressLint("Range")String ramBrand = ramCursor.getString(ramCursor.getColumnIndex("brand"));
+                @SuppressLint("Range")String ramModel = ramCursor.getString(ramCursor.getColumnIndex("model"));
+                @SuppressLint("Range")String ramCapacity = ramCursor.getString(ramCursor.getColumnIndex("capacity"));
+                @SuppressLint("Range")String ramSpeed = ramCursor.getString(ramCursor.getColumnIndex("speed"));
+                @SuppressLint("Range")String ramType = ramCursor.getString(ramCursor.getColumnIndex("type"));
+                @SuppressLint("Range")String ramPrice = ramCursor.getString(ramCursor.getColumnIndex("price"));
+                @SuppressLint("Range")String part = ramBrand + " " + ramModel + " " + ramCapacity + " " + ramSpeed + " " + ramType + " ₱" + ramPrice;
                 ramList.add(part);
             } while (ramCursor.moveToNext());
             ramCursor.close();
@@ -363,12 +361,12 @@ public class CreateBuildFragment extends Fragment {
         List<String> psuList = new ArrayList<>();
         if (psuCursor != null && psuCursor.moveToFirst()) {
             do {
-                String psuModel = psuCursor.getString(psuCursor.getColumnIndex("model"));
-                String psuWattage = psuCursor.getString(psuCursor.getColumnIndex("wattage"));
-                String psuRating = psuCursor.getString(psuCursor.getColumnIndex("rating"));
-                String psuModular = psuCursor.getString(psuCursor.getColumnIndex("modular"));
-                String psuPrice = psuCursor.getString(psuCursor.getColumnIndex("price"));
-                String part = psuModel + " " + psuWattage + " " + psuRating + " " + psuModular + " ₱" + psuPrice;
+                @SuppressLint("Range")String psuModel = psuCursor.getString(psuCursor.getColumnIndex("model"));
+                @SuppressLint("Range")String psuWattage = psuCursor.getString(psuCursor.getColumnIndex("wattage"));
+                @SuppressLint("Range")String psuRating = psuCursor.getString(psuCursor.getColumnIndex("rating"));
+                @SuppressLint("Range")String psuModular = psuCursor.getString(psuCursor.getColumnIndex("modular"));
+                @SuppressLint("Range")String psuPrice = psuCursor.getString(psuCursor.getColumnIndex("price"));
+                @SuppressLint("Range")String part = psuModel + " " + psuWattage + " " + psuRating + " " + psuModular + " ₱" + psuPrice;
                 psuList.add(part);
             } while (psuCursor.moveToNext());
             psuCursor.close();
