@@ -74,10 +74,12 @@
         android:layout_below="@+id/processorTextView">
 
         <AutoCompleteTextView
+            android:id="@+id/searchProcessorTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Search processor"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Motherboard Text View-->
@@ -105,6 +107,7 @@
         android:layout_below="@+id/motherboardTextView">
 
         <AutoCompleteTextView
+            android:id="@+id/searchMotherboardTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -113,7 +116,7 @@
 
     <!-- Cooler Text View-->
     <TextView
-        android:id="@+id/cpucoolerTextView"
+        android:id="@+id/coolerTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CPU Cooler"
@@ -124,7 +127,7 @@
         android:textStyle="bold"
         android:layout_below="@id/motherboardTextInputLayout"/>
 
-    <!-- Motherboard Text Input View -->
+    <!-- Cooler Text Input View -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cpucoolerTextInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
@@ -133,9 +136,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="12dp"
-        android:layout_below="@+id/cpucoolerTextView">
+        android:layout_below="@+id/coolerTextView">
 
         <AutoCompleteTextView
+            android:id="@+id/searchCoolerTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -167,6 +171,7 @@
         android:layout_below="@+id/graphicsTextView">
 
         <AutoCompleteTextView
+            android:id="@+id/searchGraphicsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -198,6 +203,7 @@
         android:layout_below="@+id/caseTextView">
 
         <AutoCompleteTextView
+            android:id="@+id/searchCaseTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -229,6 +235,7 @@
         android:layout_below="@+id/ramTextView">
 
         <AutoCompleteTextView
+            android:id="@+id/searchRamTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -260,6 +267,7 @@
             android:layout_below="@+id/psuTextView">
 
             <AutoCompleteTextView
+                android:id="@+id/searchPsuTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
